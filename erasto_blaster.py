@@ -1,5 +1,4 @@
 from sanic import Sanic
-from sanic.response import json
 from erasto_sieve import erasto_sieve
 
 app = Sanic(__name__)
