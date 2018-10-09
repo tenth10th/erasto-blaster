@@ -11,6 +11,7 @@ def app():
 
 @pytest.fixture
 def socket_fixture(app, loop, test_client):
+    """ Answers async websocket requests (until we're done testing) """
     return loop.run_until_complete(test_client(app, protocol=WebSocketProtocol))
 
 

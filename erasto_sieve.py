@@ -4,6 +4,9 @@ some_example_primes = (2, 3, 5, 7, 11, 13)
 def erasto_sieve():
     """
     Prime number generator (using the Sieve of Erastothenes)
+
+    Adapted from my favorite StackOverflow implementations; This isn't really
+    the interesting part of the app, just something to serve over a websocket.
     """
     divisors = dict()
     current_integer = 2
