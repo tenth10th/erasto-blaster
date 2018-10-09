@@ -6,13 +6,14 @@ Sanic is not Windows-friendly because of UVLoop, but this app should be useable 
 
 To install via Pipenv, clone this repo, cd into the folder, and run:
 ```
-pipenv install
+pipenv install --dev
 ```
 
 Or more generally via Pip (ideally in a virtualenv):
 ```
-pip install -r requirements.txt
+pip install -r dev-requirements.txt
 ```
+(Dev includes some requirements you may not want or need, like flake8 and black, but is necessary to run the tests below.)
 
 You can then run the erasto_blaster server directly:
 ```
