@@ -30,6 +30,7 @@ pip = "==18.0"
 pytest-sanic = "==0.1.13"
 pytest = "==3.8.2"
 black = "*"
+"flake8" = "*"
 
 [requires]
 python_version = "3.6"
