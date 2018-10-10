@@ -5,16 +5,16 @@ app = Sanic(__name__)
 
 
 @app.websocket("/primes")
-async def erasto_blaster(request, ws):
+async def erasto_blaster(request, websocket):
     prime_generator = erasto_sieve()
 
     for next_prime in prime_generator:
 
         print(f"erasto_blaster sending Prime: {next_prime}")
 
-        await ws.send(str(next_prime))
+        await websocket.send(str(next_prime))
 
-        incoming_data = await ws.recv()
+        incoming_data = await websocket.recv()
 
         print(f"erasto_blaster recieved response: {incoming_data}")
 
